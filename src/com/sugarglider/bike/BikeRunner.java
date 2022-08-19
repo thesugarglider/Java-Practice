@@ -5,7 +5,7 @@ public class BikeRunner {
         Bike ducati = new Bike();
 
         ducati.startBike();
-        ducati.setSpeed(80);
+        ducati.setSpeed((short)80);
         System.out.println(ducati.getSpeed()+" kmph");
     }
 }

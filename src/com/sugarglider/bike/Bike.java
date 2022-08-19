@@ -1,9 +1,9 @@
 package com.sugarglider.bike;
 
 public class Bike {
-    private int speed;
+    private short speed;
 
-    public void setSpeed(int speed){
+    public void setSpeed(short speed){
         this.speed = speed;
     }
 
