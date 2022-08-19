@@ -8,7 +8,7 @@ public class Bike {
     }
 
     public short getSpeed(){
-        return this.speed;
+        return  this.speed;
     }
 
     public void startBike(){
