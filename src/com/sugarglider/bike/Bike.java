@@ -4,7 +4,8 @@ public class Bike {
     private short speed;
 
     public void setSpeed(short speed){
-        this.speed = speed;
+        if (speed > 0)
+            this.speed = speed;
     }
 
     public short getSpeed(){
