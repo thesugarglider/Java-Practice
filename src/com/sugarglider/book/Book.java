@@ -11,6 +11,14 @@ public class Book {
         return this.noOfCopies;
     }
 
+    public void increaseCopies(short howMuch){
+        this.noOfCopies += howMuch;
+    }
+
+    public void decreaseCopies(short howMuch){
+        this.noOfCopies -= howMuch;
+    }
+
     public void openBook(){
         System.out.println("Book Opened");
     }
