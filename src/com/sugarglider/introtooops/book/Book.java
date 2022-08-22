@@ -1,4 +1,4 @@
-package com.sugarglider.book;
+package com.sugarglider.introtooops.book;
 
 public class Book {
     private short noOfCopies;

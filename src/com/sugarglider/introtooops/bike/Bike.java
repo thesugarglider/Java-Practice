@@ -1,7 +1,12 @@
-package com.sugarglider.bike;
+package com.sugarglider.introtooops.bike;
 
 public class Bike {
     private short speed;
+
+    Bike(){
+        //this.speed = 0;
+        this((short) 0);
+    }
 
     Bike(short speed){
         this.speed = setSpeed(speed);

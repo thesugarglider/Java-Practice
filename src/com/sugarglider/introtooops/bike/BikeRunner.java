@@ -1,8 +1,11 @@
-package com.sugarglider.bike;
+package com.sugarglider.introtooops.bike;
+
+import com.sugarglider.introtooops.bike.Bike;
 
 public class BikeRunner {
     public static void main(String[] args) {
         Bike ducati = new Bike((short)100);
+        Bike honda = new Bike();
 
         ducati.startBike();
         //ducati.setSpeed((short)80);
