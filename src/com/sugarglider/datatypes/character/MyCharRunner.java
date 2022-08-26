@@ -6,5 +6,6 @@ public class MyCharRunner {
         System.out.println(myChar.isVowel());
         System.out.println(myChar.isDigit());
         System.out.println(myChar.isAlphabet());
+        System.out.println(myChar.isConsonant());
     }
 }
