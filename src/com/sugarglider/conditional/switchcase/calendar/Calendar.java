@@ -9,6 +9,7 @@ public class Calendar {
         this.noOfMonth = noOfMonth;
     }
 
+    //determines whether it is a weekday or weekend
     public  void isWeekDay(){
         switch(noOfDay){
             case 1:
