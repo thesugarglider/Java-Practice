@@ -1,13 +1,24 @@
-package com.sugarglider.bike;
+package com.sugarglider.introtooops.bike;
 
 public class Bike {
     private short speed;
 
-    public void setSpeed(short speed){
-        if (speed >= 0)
+    Bike(){
+        //this.speed = 0;
+        this((short) 0);
+    }
+
+    Bike(short speed){
+        this.speed = setSpeed(speed);
+    }
+
+    public short setSpeed(short speed){
+        if (speed >= 0) {
             this.speed = speed;
+            return this.speed;
+        }
         else
-            System.out.println("Can't Decrease Speed");
+            return 0;
     }
 
     public short getSpeed(){

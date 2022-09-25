@@ -1,10 +1,15 @@
-package com.sugarglider.book;
+package com.sugarglider.introtooops.book;
 
 public class Book {
     private short noOfCopies;
 
-    public void setNoOfCopies(short noOfCopies){
+    Book(short noOfCopies){
+        this.noOfCopies = setNoOfCopies(noOfCopies);
+    }
+
+    public short setNoOfCopies(short noOfCopies){
         this.noOfCopies = noOfCopies;
+        return this.noOfCopies;
     }
 
     public short getNoOfCopies(){
