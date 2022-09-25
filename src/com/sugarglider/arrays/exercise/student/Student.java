@@ -1,4 +1,4 @@
-package com.sugarglider.arrays.exercise;
+package com.sugarglider.arrays.exercise.student;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

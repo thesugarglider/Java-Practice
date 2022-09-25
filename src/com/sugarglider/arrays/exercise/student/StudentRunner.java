@@ -1,4 +1,6 @@
-package com.sugarglider.arrays.exercise;
+package com.sugarglider.arrays.exercise.student;
+
+import com.sugarglider.arrays.exercise.student.Student;
 
 import java.util.Arrays;
 
