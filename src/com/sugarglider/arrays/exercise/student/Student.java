@@ -2,14 +2,18 @@ package com.sugarglider.arrays.exercise.student;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Student {
     private String name;
-    private int[] listOfMarks;
+    private ArrayList<Integer> listOfMarks = new ArrayList<Integer>();
     Student(String name, int... listOfMarks){
         this.name = name;
-        this.listOfMarks = listOfMarks;
+        for(int mark:listOfMarks){
+            this.listOfMarks.add(mark);
+        }
+        ;
     }
 
     public String getName(){
@@ -17,10 +21,10 @@ public class Student {
     }
 
     public int getNumberOfMarks(){
-        return listOfMarks.length;
+        return listOfMarks.size();
     }
 
-    public int[] getMarks(){
+    public ArrayList<Integer> getMarks(){
         return listOfMarks;
     }
 
@@ -31,17 +35,25 @@ public class Student {
         }
 
 
-        return new BigDecimal(sum).divide(new BigDecimal(listOfMarks.length),3, RoundingMode.UP);
+        return new BigDecimal(sum).divide(new BigDecimal(listOfMarks.size()),3, RoundingMode.UP);
+    }
+
+    public void addNewMark(int mark){
+        listOfMarks.add(mark);
+    }
+
+    public void removeMark(int index){
+         listOfMarks.remove(index);
     }
 
     public int getMaximumMark(){
-        Arrays.sort(listOfMarks);
-        return listOfMarks[listOfMarks.length-1];
+        listOfMarks.sort(Comparator.naturalOrder());
+        return listOfMarks.get(listOfMarks.size()-1);
     }
 
     public int getMinimumMark(){
-        Arrays.sort(listOfMarks);
-        return listOfMarks[0];
+
+        return listOfMarks.get(0);
 
     }
 

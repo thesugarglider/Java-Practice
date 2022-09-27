@@ -2,6 +2,8 @@
 
 package com.sugarglider.arrays;
 
+import java.util.Arrays;
+
 public class Example6 {
 
     public static int sum(int... numbers){
@@ -9,6 +11,7 @@ public class Example6 {
         for(int number:numbers){
             sum+=number;
         }
+        System.out.print(Arrays.toString(numbers)+"-> ");
         return sum;
     }
 
