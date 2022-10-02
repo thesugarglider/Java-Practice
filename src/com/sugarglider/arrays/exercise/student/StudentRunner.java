@@ -25,6 +25,8 @@ public class StudentRunner {
         System.out.println("Maximum mark: "+student1.getMaximumMark());
         System.out.println("Minimum mark:"+student1.getMinimumMark());
         System.out.println("Average of the marks: "+student1.getAverageOfMarks());
+        student1.removeMark(0);
+        System.out.println("Mark Removed: "+student1.getMarks());
 
     }
 }
