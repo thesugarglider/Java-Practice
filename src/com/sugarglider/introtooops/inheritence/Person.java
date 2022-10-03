@@ -5,6 +5,10 @@ public class Person {
     private String email;
     private int number;
 
+    public Person(String name){
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
