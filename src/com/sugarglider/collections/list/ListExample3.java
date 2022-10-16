@@ -1,4 +1,4 @@
-package com.sugarglider.collections;
+package com.sugarglider.collections.list;
 
 import java.util.ArrayList;
 import java.util.List;
