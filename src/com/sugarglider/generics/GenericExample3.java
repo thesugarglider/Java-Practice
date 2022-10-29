@@ -5,9 +5,9 @@ import java.util.List;
 public class GenericExample3 {
 
     static Number sumOfNumber(List<? extends Number> numbers){
-        Number totalSum = 0.0;
+         double totalSum = 0.0;
         for(Number number:numbers){
-            totalSum += number;
+            totalSum += number.intValue();
         }
         return totalSum;
     }
