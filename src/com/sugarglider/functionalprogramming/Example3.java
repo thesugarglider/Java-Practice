@@ -9,7 +9,6 @@ public class Example3 {
     }
 
     public static void addNumbers(List<Integer> numbers){
-        int sum = numbers.stream().reduce(0,(number1, number2) -> number1 + number2);
-        System.out.println(sum);
+        System.out.println((int) numbers.stream().reduce(0,(number1, number2) -> number1 + number2));
     }
 }
