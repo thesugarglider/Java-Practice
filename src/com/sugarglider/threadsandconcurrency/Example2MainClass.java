@@ -5,6 +5,7 @@ public class Example2MainClass {
 
         Example2 task1 = new Example2();
         Thread task1Thread = new Thread(task1);
+        task1Thread.setPriority(10);
 
         task1Thread.start();
 
