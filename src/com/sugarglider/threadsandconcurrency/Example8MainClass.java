@@ -14,5 +14,7 @@ public class Example8MainClass {
         System.out.println(welcomeFuture.get());
 
         System.out.println("main completed");
+
+        executorService.shutdown();
     }
 }
