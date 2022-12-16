@@ -19,7 +19,6 @@ public class Example3 {
             System.out.println(a[2]);
             System.out.println("method 2 ended");
         }catch (NullPointerException ex){
-            System.out.println("null pointer exception");
             ex.printStackTrace();
         }
         catch (Exception ex){
