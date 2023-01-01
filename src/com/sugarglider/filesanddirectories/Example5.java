@@ -11,7 +11,6 @@ public class Example5 {
         Path pathToWriteFile = Paths.get("./resources/filetowrite.txt");
 
         List<String> list = List.of("Apple", "Cat", "Dog");
-
         Files.write(pathToWriteFile,list);
     }
 }
