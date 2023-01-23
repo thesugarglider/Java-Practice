@@ -10,7 +10,7 @@ public class Example5 {
     public static void main(String[] args) throws IOException {
         Path pathToWriteFile = Paths.get("./resources/filetowrite.txt");
 
-        List<String> list = List.of("Apple", "Cat", "Dog");
+        List<String> list = List.of("Apple", "Cat", "Dog","Mango");
         Files.write(pathToWriteFile,list);
     }
 }
