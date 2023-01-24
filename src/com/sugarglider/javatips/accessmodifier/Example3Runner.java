@@ -1,7 +1,7 @@
 package com.sugarglider.javatips.accessmodifier;
 
 import com.sugarglider.javatips.Example3;
-import com.sugarglider.javatips.Example3_1;
+//import com.sugarglider.javatips.Example3_1;
 
 public class Example3Runner {
     public static void main(String[] args) {
