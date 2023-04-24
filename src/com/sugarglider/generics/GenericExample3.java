@@ -5,7 +5,7 @@ import java.util.List;
 
 public class GenericExample3 {
 
-    static Number sumOfNumber(List<? extends Number> numbers){
+    static <X extends Number> Number sumOfNumber(List<? extends Number> numbers){
          double totalSum = 0.0;
         for(Number number:numbers){
             totalSum += number.intValue();
