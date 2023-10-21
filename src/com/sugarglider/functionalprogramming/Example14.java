@@ -10,5 +10,7 @@ public class Example14 {
 
         List<String> words = List.of("Apple", "Ant", "Cat");
         words.stream().map(word->word.toLowerCase()).forEach(word-> System.out.println(word));
+
+        words.stream().forEach(element -> System.out.println(element.length()));
     }
 }
