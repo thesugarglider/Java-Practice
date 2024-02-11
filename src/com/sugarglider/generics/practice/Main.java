@@ -2,8 +2,9 @@ package com.sugarglider.generics.practice;
 
 public class Main {
     public static void main(String[] args) {
-        Team<BaseBallPlayer> phillies = new Team<>("Philadelphia");
-        Team<BaseBallPlayer> astros = new Team<>("Astros");
+        Affiliation phiilies = new Affiliation("Phil", "CA", "USA");
+        Team<BaseBallPlayer, Affiliation> phillies = new Team<>("Philadelphia",phiilies );
+        Team<BaseBallPlayer, Affiliation> astros = new Team<>("Astros",phiilies);
 
         BaseBallPlayer rishi = new BaseBallPlayer("Rishi", "Left Side");
         phillies.addTeamMembers(rishi);
@@ -15,10 +16,13 @@ public class Main {
 
         scoreResult(phillies, 2, astros , 3);
 
-        Team<FootBallPlayer> washers = new Team<>("Washington");
-        Team<FootBallPlayer> newbies = new Team<>("New York");
+        Affiliation location = new Affiliation("Maharashtra", "MUM", "Bharat");
+        Team<FootBallPlayer, Affiliation> washers = new Team<>("Washington",location);
+        Team<FootBallPlayer, Affiliation> newbies = new Team<>("New York",location);
 
         FootBallPlayer sunil = new FootBallPlayer("Sunil", "Mid Position");
+        FootBallPlayer gurung = new FootBallPlayer("Gurung", "Goal");
+        washers.addTeamMembers(gurung);
         washers.addTeamMembers(sunil);
         washers.listTeamMembers();
 

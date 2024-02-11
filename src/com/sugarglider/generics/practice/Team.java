@@ -3,15 +3,17 @@ package com.sugarglider.generics.practice;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Team <T>{
+public class Team <T extends Player, S>{
     private String teamName;
     private List<T> teamMembers = new ArrayList<>();
     private int totalWins=0;
     private int totalLoses=0;
     private int totalTies=0;
+    private S affiliation;
 
-    public Team(String teamName) {
+    public Team(String teamName, S affiliation) {
         this.teamName = teamName;
+        this.affiliation = affiliation;
     }
 
     public void addTeamMembers(T teamMember){
@@ -21,8 +23,11 @@ public class Team <T>{
     }
 
     public void listTeamMembers(){
-        System.out.println(teamName + " Roster");
-        System.out.println(teamMembers);
+        System.out.print(teamName + " Roster");
+        System.out.println(affiliation == null ? "" : " AFFILIATION: "+ affiliation) ;
+        for(T teamMember : teamMembers){
+            System.out.println(teamMember.name());
+        }
     }
 
     public int ranking(){
