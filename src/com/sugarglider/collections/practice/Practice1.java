@@ -8,6 +8,11 @@ record GroceryItem(String name, String type , int count){
     GroceryItem(String name){
         this(name, "DAIRY", 1);
     }
+
+    @Override
+    public String toString(){
+        return String.format("%s %d in %s", name.toUpperCase(), count, type);
+    }
 }
 public class Practice1 {
     public static void main(String[] args) {
