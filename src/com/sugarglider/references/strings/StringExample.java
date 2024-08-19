@@ -2,7 +2,7 @@ package com.sugarglider.references.strings;
 
 public class StringExample {
     public static void main(String[] args) {
-        String str = "Test";
+        String str = "Test";  // this is a string literal which is stored in string pool.
         //System.out.println(str.length());
 
         String biggerString = "This is a lot of string";
