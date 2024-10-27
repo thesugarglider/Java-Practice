@@ -10,10 +10,12 @@ public class Example14 {
         CompletableFuture<String> employeeFuture = CompletableFuture.supplyAsync(() -> {
                     gracefullyShutdown("Employee");
                     return "Employee information update in DB";
-                }).exceptionally(ex-> {
-            System.out.println("unable to update information in DB");
-            return "500 Internal server error";
-        });
+                });
+//                .exceptionally(ex-> {
+//            System.out.println("unable to update information in DB");
+//            return "500 Internal server error";
+//        }
+//        );
 
         CompletableFuture<String> employeeDocumentFuture = CompletableFuture.supplyAsync(() ->{
             return "Employee information update in S3";
@@ -21,6 +23,11 @@ public class Example14 {
 
         CompletableFuture<String> combineFuture = employeeFuture.thenCombine(employeeDocumentFuture , (result1, result2) -> {
             return result1 + "\n" + result2;
+        }).handle((res,ex) -> {
+            if(ex!=null){
+                System.out.println("An occurred while employee data processing");
+                return "Operation Failed";
+            } return res;
         });
 
         System.out.println(combineFuture.get());
