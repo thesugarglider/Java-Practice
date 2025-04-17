@@ -1,5 +1,7 @@
 package com.sugarglider.threadsandconcurrency.practice;
 
+import java.util.concurrent.TimeUnit;
+
 public class MyFirstThread {
 
     public static void main(String[] args) {
@@ -8,7 +10,8 @@ public class MyFirstThread {
         thread.start();
 
         try {
-            Thread.sleep(3000);
+            //Thread.sleep(3000);
+            TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
